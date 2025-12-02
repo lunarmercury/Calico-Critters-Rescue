@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calico Critters Rescue</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+        :root {
+            font-family: 'Inter', sans-serif;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #fcd34d; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fbbf24;
+        }
+    </style>
+    <script>
+        
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pastel-pink': '#fbcfe8', 
+                        'pastel-green': '#a7f3d0', 
+                        'pastel-blue': '#bfdbfe', 
+                        'pastel-yellow': '#fde68a', 
+                        'pastel-light': '#fff7ed', 
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pastel-light min-h-screen">
+
+    <header class="bg-pastel-pink shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            
+            <h1 class="text-3xl font-extrabold text-pink-900 tracking-wider">
+                Loving Critters Rescue
+            </h1>
+
+            <div class="flex items-center space-x-4">
+                <div class="hidden sm:flex space-x-2">
+                    <button class="px-3 py-2 text-pink-900 font-semibold rounded-lg hover:bg-pink-100 transition duration-150">
+                        Home
+                    </button>
+                    <button class="px-3 py-2 text-pink-900 font-semibold rounded-lg border-2 border-pink-900 hover:bg-pink-900 hover:text-white transition duration-150">
+                        Login
+                    </button>
+                </div>
+
+                <form action="" method="get" class="flex items-center space-x-2">
+                    <input type="text" placeholder="Search a friend..." name="q" 
+                            class="p-2 border border-pink-900 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-pink-500 w-32 sm:w-48 text-pink-900 bg-white"
+                            aria-label="Search for a cat">
+                    <button type="submit" class="bg-pink-700 text-white p-2 rounded-lg hover:bg-pink-800 transition duration-150 hidden md:block">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <h2 class="text-4xl font-bold text-gray-800 mb-8 text-center sm:text-left">
+            Meet Our Adoptable Critters
+        </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div class="bg-pastel-green p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/mittens.jpg"
+                    alt="Brown tabby" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-green-900 mb-1">Mittens</h3>
+                <p class="text-green-800 text-sm mb-4">Age: 1 year | Playful & affectionate</p>
+                <p class="text-green-700">A sweet white and grey siberian who loves to chase feather toys and napping in the sun.</p>
+                <button class="mt-4 w-full bg-green-700 text-white font-semibold py-2 rounded-xl hover:bg-green-800 transition">
+                    Adopt Me
+                </button>
+            </div>
+
+            <div class="bg-pastel-blue p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/whiskers.jpg"
+                    alt="Calico kitten" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-blue-900 mb-1">Whiskers</h3>
+                <p class="text-blue-800 text-sm mb-4">Age: 5 months | Striking & fluffy</p>
+                <p class="text-blue-700">A handsome grey kitty, extremely soft and perfect for quiet evenings and reading.</p>
+                <button class="mt-4 w-full bg-blue-700 text-white font-semibold py-2 rounded-xl hover:bg-blue-800 transition">
+                    Adopt Me
+                </button>
+            </div>
+
+            <div class="bg-pastel-yellow p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/honey.jpg" 
+                    alt="Long-haired cat" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-yellow-900 mb-1">Honey</h3>
+                <p class="text-yellow-800 text-sm mb-4">Age: 2 years | Gorgeous & calm</p>
+                <p class="text-yellow-700">A stunning calico with endless charm. Needs a home with lots of loving attention!</p>
+                <button class="mt-4 w-full bg-yellow-700 text-white font-semibold py-2 rounded-xl hover:bg-yellow-800 transition">
+                    Adopt Me
+                </button>
+            </div>
+
+            <div class="bg-pastel-pink p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/jasper.jpg"
+                    alt="Siamese kitten" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-pink-900 mb-1">Jasper</h3>
+                <p class="text-pink-800 text-sm mb-4">Age: 7 months | Shy & loves quiet</p>
+                <p class="text-pink-700">A tiny tabby who needs a patient, loving home to help her come out of her shell.</p>
+                <button class="mt-4 w-full bg-pink-700 text-white font-semibold py-2 rounded-xl hover:bg-pink-800 transition">
+                    Adopt Me
+                </button>
+            </div>
+            
+            <div class="bg-pastel-green p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/rosie.jpeg"
+                    alt="Mother cat" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-green-900 mb-1">Rosie</h3>
+                <p class="text-green-800 text-sm mb-4">Age: 1 year | **Needs Fostering**</p>
+                <p class="text-green-700">A brave mama looking for a temporary foster home to raise her beautiful, newborn litter.</p>
+                <button class="mt-4 w-full bg-green-700 text-white font-semibold py-2 rounded-xl hover:bg-green-800 transition">
+                    Foster Me
+                </button>
+            </div>
+
+            <div class="bg-pastel-blue p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/luna.webp"
+                    alt="Gray cat" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-blue-900 mb-1">Luna</h3>
+                <p class="text-blue-800 text-sm mb-4">Age: 3 years | Quiet observer</p>
+                <p class="text-blue-700">A gorgeous Russian Blue mix, very independent but loves chin scratches.</p>
+                <button class="mt-4 w-full bg-blue-700 text-white font-semibold py-2 rounded-xl hover:bg-blue-800 transition">
+                    Adopt Me
+                </button>
+            </div>
+
+            <div class="bg-pastel-yellow p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/coco.jpg"
+                    alt="Silver tabby" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-yellow-900 mb-1">Coco</h3>
+                <p class="text-yellow-800 text-sm mb-4">Age: 9 months | Playful & curious</p>
+                <p class="text-yellow-700">A long-haired beauty with endless energy. Needs a home with plenty stimulation.</p>
+                <button class="mt-4 w-full bg-yellow-700 text-white font-semibold py-2 rounded-xl hover:bg-yellow-800 transition">
+                    Adopt Me
+                </button>
+            </div>
+
+            <div class="bg-pastel-pink p-6 rounded-2xl shadow-xl hover:shadow-2xl transform hover:scale-[1.02] transition duration-300">
+                <img src="images/sunny.jpg"
+                    alt="Orange tabby" 
+                    class="w-full h-40 object-cover rounded-2xl mb-4 border-4 border-white shadow-md">
+                <h3 class="text-2xl font-bold text-pink-900 mb-1">Shadow</h3>
+                <p class="text-pink-800 text-sm mb-4">Age: 4 months | Reserved & playful</p>
+                <p class="text-pink-700">A cute orange kitten who loves pets and would thrive in a home with another playful cat.</p>
+                <button class="mt-4 w-full bg-pink-700 text-white font-semibold py-2 rounded-xl hover:bg-pink-800 transition">
+                    Adopt Me
+                </button>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="bg-pink-300 text-pink-900 text-center py-6 mt-12">
+        <p class="text-sm">&copy; 2025 Calico Critters Rescue. All rights reserved. | Giving every critter a happy home.</p>
+    </footer>
+</body>
+</html>
